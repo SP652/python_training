@@ -1,0 +1,5 @@
+
+DAY 2 Python Training
+
+1. Learn to debug using PDB
+

@@ -1,0 +1,51 @@
+Notes for Day 1:
+
+
+
+1. Operator and operator operations
+    + _ *  / -> Binary
+    Conditions: 
+        * TYPE OF BOTH THE OPERAND MUST BE SAME
+        * Arithmetic has left to right associtivity
+        * Higher precedence first - BODMAS
+        * Intermediate result is stored in special purpose register named: Accumalator
+        * Float is stored as IEEE standards
+        * Negative number is saved by taking its absolute and followed by 2's compliment 
+        * power operator (**) has right to left operation
+        
+    < > <= >= != == -> Realtional operators    ip-number, Op - boolean
+    Conditions: 
+        * Open Interval - (10,20) 
+        * Left Open - (O10,30]
+        * Closed Interval - [30, 50]
+
+    and, or, not -> Logical operators
+    Conditions:
+        * ip=boolean, op=boolean
+        * Short circuiting is implemented when 1st condiditon fails in multiple operators
+
+
+
+2. CRUD Operations:
+    C - Create
+    R - Read
+    R - Read
+    U - Update
+    D - Delete
+
+
+3. Incase of alignment : eg: print('%d * %02d = %3d'%(input_number,i,input_number*i))
+    here, substitute 0 with other such as:
+        - -> left alignment
+        0 -> add extra such that character spaces are alloted and thereby compensating the left out space but only applicable during right alignment
+        usually, it is right aligned
+
+4. incase of using print( 'n1=' , n1, 'n2' ) here it is a implicit num to string conversion
+     if + is used then it needs explicit declaration (appends with space)
+
+
+5. for i in range (130,10,-2)
+    print(i) 
+    i-=2, here, range is keeping control and is independent form the variable outside the range hence op i 30, 28,26 etc...
+
+6. Use pdb for debugging
