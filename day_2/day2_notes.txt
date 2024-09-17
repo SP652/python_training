@@ -8,4 +8,14 @@ DAY 2 Python Training
 String Programs:
     1. UpperCase: variable.upper()
     2. LowerCase: variable.lower()
-    
+
+git status: tells status
+
+git add . // states changes
+
+git commit origin main // commit to origin 
+git commit -m 'note' // creates obejsct with all files and folders
+
+git pull origin main // sync the git repo into local machine
+
+git push origin main // Syncs the object to the git object

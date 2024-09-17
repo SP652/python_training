@@ -1,4 +1,4 @@
-
+# String capitalize and startswith
 
 place='bengaluru'
 
