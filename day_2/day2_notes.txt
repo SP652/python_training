@@ -19,3 +19,6 @@ git commit -m 'note' // creates obejsct with all files and folders
 git pull origin main // sync the git repo into local machine
 
 git push origin main // Syncs the object to the git object
+
+* first argumetn is always the file name itself
+* SPlits on delimiter and returns on a list
