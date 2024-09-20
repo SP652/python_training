@@ -1,0 +1,17 @@
+airline_management/
+│
+├── main.py
+├── database.py
+├── models/
+│   ├── __init__.py
+│   ├── device.py
+│   ├── transfer.py
+│   ├── alert.py
+│   ├── data_log.py
+│   ├── flight.py
+│   ├── ticket.py
+│   ├── employee.py
+│   ├── passenger.py
+│   ├── runway.py
+│   └── luggage.py
+└── network_management.py
