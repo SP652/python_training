@@ -1,0 +1,104 @@
+Flight Management System Documentation
+
+Overview
+
+The Flight Management System is a console-based application that allows an admin to manage flights, and users to book and cancel flights. 
+The system includes functionalities for sending email confirmations for bookings and cancellations, as well as recording and maintaining booking data in a CSV file.
+
+Components
+
+ 1. `flight.py`
+
+ Class: `Flight`
+- Purpose: Represents a flight with details such as flight ID, source, destination, departure time, arrival time, and fare.
+  - Parameters:
+    - `flight_id`: Unique identifier for the flight.
+    - `source`: Departure location.
+    - `destination`: Arrival location.
+    - `departure_time`: Scheduled departure time.
+    - `arrival_time`: Scheduled arrival time.
+    - `fare`: Cost of the flight.
+
+ 2. `email_service.py`
+
+ Function: `send_email_confirmation(name, email, flight)`
+- Purpose: Sends a confirmation email to the user after booking a flight.
+  
+- Parameters:
+  - `name`: Name of the passenger.
+  - `email`: Email address of the passenger.
+  - `flight`: An instance of `Flight` containing the flight details.
+
+ Function: `send_cancellation_email(name, email, flight)`
+- Purpose: Sends an email to the user to notify them of the cancellation of their flight booking.
+
+- Parameters:
+  - `name`: Name of the passenger.
+  - `email`: Email address of the passenger.
+  - `flight`: An instance of `Flight` containing the flight details.
+
+ 3. `booking_service.py`
+
+ Class: `BookingService`
+- Purpose: Manages flight bookings and maintains records in a CSV file.
+  
+  - Parameters:
+    - `csv_file`: Name of the CSV file to store bookings (default is `bookings.csv`).
+
+ Methods:
+- `ensure_csv_headers()`: Checks if the CSV file exists and creates it with appropriate headers if it does not.
+
+- `record_booking(flight, name, email)`:
+  - Records a new flight booking into the CSV file.
+  
+- `update_booking_status(email, cancelled=True)`:
+  - Updates the cancellation status of a booking based on the user's email.
+
+ 4. `flight_management_system.py`
+
+ Class: `FlightManagementSystem`
+- Purpose: The main class that manages the flight system operations, including admin login, flight management, and booking processes.
+
+ Methods:
+- `admin_login()`: Prompts for admin credentials and verifies them.
+  
+- `add_flight()`: Allows the admin to add a new flight.
+
+- `delete_flight()`: Allows the admin to delete an existing flight.
+
+- `display_flights()`: Displays a list of available flights.
+
+- `book_flight()`: Allows a user to book a flight and sends a confirmation email.
+
+- `cancel_booking()`: Allows a user to cancel a booking and sends a cancellation email.
+
+- `logout()`: Logs out the admin from the system.
+
+- `run()`: Starts the application, allowing the admin to interact with the system through a console menu.
+
+ Usage Instructions
+
+1. Run the Application: Execute the `flight_management_system.py` file.
+2. Admin Login: Enter the admin username and password when prompted. The default credentials are:
+   - Username: `admin`
+   - Password: `password`
+3. Manage Flights:
+   - Add, delete, or display flights using the respective options in the menu.
+4. Book a Flight:
+   - Choose a flight to book by entering its Flight ID, then provide your name and email address.
+5. Cancel a Booking:
+   - Enter your email to find and cancel your booking.
+6. Logout: Use the logout option to exit the admin session.
+
+ Security Considerations
+
+- Passwords are hardcoded for demo purposes. In a production environment, implement secure password management practices.
+- Ensure proper handling of sensitive data such as emails and flight information.
+
+ Dependencies
+
+- Python 3.x
+- `smtplib` and `email.mime` libraries for email functionality.
+- Standard libraries such as `csv`, `datetime`, and `os`.
+
+---

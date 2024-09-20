@@ -1,0 +1,6 @@
+flight_management/
+│
+├── flight_management_system             # Entry point of the application
+├── flight.py             # Flight class and related functionalities
+├── booking_service.py            # Booking management (booking, cancellation, email sending)
+└── email_services.py              # Admin functionalities (login, flight management)
