@@ -23,7 +23,7 @@ Thank you for booking with us!
 
     try:
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
-            server.login('sanjaypsgowda@gmail.com', 'uooh rybg osxo saik')  # Replace with your credentials
+            server.login('ADD_AIRLINES_EMAIL(XYZ.@gmail.com)', 'USE_MAIL_PASSWORD')  # Replace with your credentials
             server.send_message(msg)
         print("Email sent successfully.")
     except Exception as e:
