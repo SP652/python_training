@@ -18,7 +18,7 @@ Flight Details:
 Thank you for booking with us!
 """)
     msg['Subject'] = 'Flight Booking Confirmation'
-    msg['From'] = 'sanjaypsgowda@gmail.com'  # Replace with your email
+    msg['From'] = 'ADD_AIRLINE_EMAIL(XYZ.@gmail.com)'  # Replace with your email
     msg['To'] = email
 
     try:
